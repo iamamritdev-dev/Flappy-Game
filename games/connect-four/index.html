@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect 4 X</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../../index.html">← HUB</a>
+    <header><p class="eyebrow">LOCAL ARCADE / 2 PLAYER</p><h1>CONNECT<span>4</span></h1><p>Drop a disc. Make four. Own the board.</p></header>
+    <section class="scorebar"><div><small id="red-label">PLAYER 1</small><strong id="red-score">0</strong></div><div id="turn" class="turn">PLAYER 1'S TURN</div><div><small id="yellow-label">PLAYER 2</small><strong id="yellow-score">0</strong></div></section>
+    <section class="setup" id="setup"><input id="p1" maxlength="12" placeholder="PLAYER 1 NAME" /><input id="p2" maxlength="12" placeholder="PLAYER 2 NAME" /><button id="start">START MATCH</button></section>
+    <section class="board" id="board" aria-label="Connect four board"></section>
+    <button id="reset" class="secondary" type="button">NEW ROUND</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

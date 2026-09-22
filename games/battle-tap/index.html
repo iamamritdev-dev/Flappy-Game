@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Neon Blaster X</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<main class="game-shell">
+		<div class="topbar"><a class="back-link" href="../../index.html">← HUB</a><span>NEON BLASTER / RUN 01</span></div>
+		<header><div><p class="eyebrow">ARCADE SHOOTER</p><h1>NEON<span>BLASTER</span></h1></div><div class="hud"><small>SCORE</small><strong id="score">000000</strong><small>WAVE <b id="wave">01</b></small><div class="lives" id="lives">♥ ♥ ♥</div></div></header>
+		<section class="game-frame"><canvas id="game-canvas" aria-label="Neon Blaster game"></canvas><div id="overlay" class="overlay"><p class="eyebrow">SURVIVE THE SWARM</p><h2 id="overlay-title">READY TO LAUNCH?</h2><p id="overlay-copy">Move with A / D or arrow keys. Fire with W or Space. Destroy enemies before they reach you.</p><button id="start" type="button">START RUN</button></div></section>
+		<div class="control-strip"><span><b>A / D</b> MOVE</span><span><b>W</b> or <b>SPACE</b> FIRE</span><span><b>3 LIVES</b> PER RUN</span></div>
+		<div class="mobile-controls"><button data-key="ArrowLeft" type="button">←</button><button data-key="Space" type="button">FIRE</button><button data-key="ArrowRight" type="button">→</button></div>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>

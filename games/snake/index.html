@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake X - 2 Player Battle</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+
+        <!-- Top UI Bar -->
+        <div class="top-bar">
+            <a href="../../index.html" class="back-hub-btn">⟵ HUB</a>
+            <h1 id="title">SNAKE<span class="highlight">X</span></h1>
+            <div style="width:80px;"></div>
+        </div>
+
+        <!-- Score Bar -->
+        <div class="score-bar">
+            <div class="score-box p1-box">
+                <span class="label" id="p1-label">P1</span>
+                <span class="value" id="p1-score">0</span>
+            </div>
+            <div class="lives-display">
+                <span id="round-text" class="round-text">ROUND 1</span>
+            </div>
+            <div class="score-box p2-box">
+                <span class="label" id="p2-label">P2</span>
+                <span class="value" id="p2-score">0</span>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <main class="canvas-container">
+            <canvas id="game-canvas"></canvas>
+        </main>
+
+        <!-- Controls Hint -->
+        <div class="controls-bar">
+            <span class="ctrl p1-ctrl">P1: WASD</span>
+            <span class="ctrl p2-ctrl">P2: ↑↓←→</span>
+        </div>
+
+        <!-- Overlays -->
+        <div id="overlay-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active modern-panel">
+                <h2 class="panel-title">2-PLAYER BATTLE</h2>
+                <p class="subtitle">Crash the other snake to win each round. First to 3 wins!</p>
+                <div class="inputs-container">
+                    <div class="input-group p1-input">
+                        <input type="text" id="p1-name" placeholder="P1 NAME (WASD)" autocomplete="off" maxlength="10">
+                    </div>
+                    <div class="input-group p2-input">
+                        <input type="text" id="p2-name" placeholder="P2 NAME (ARROWS)" autocomplete="off" maxlength="10">
+                    </div>
+                </div>
+                <button id="start-btn" class="action-btn glow-btn">START BATTLE</button>
+            </div>
+
+            <!-- Round Over / Game Over Screen -->
+            <div id="game-over-screen" class="screen modern-panel">
+                <h2 class="game-over-title" id="result-title">ROUND OVER</h2>
+                <div class="joke-container">
+                    <p id="result-msg" class="result-msg"></p>
+                    <p id="name-joke" class="name-joke"></p>
+                </div>
+                <button id="continue-btn" class="action-btn glow-btn" id="continue-btn">NEXT ROUND</button>
+            </div>
+        </div>
+
+        <div class="bg-fx"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

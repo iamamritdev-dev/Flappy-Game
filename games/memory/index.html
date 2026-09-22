@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory X - Card Flip</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+
+        <div class="top-bar">
+            <a href="../../index.html" class="back-hub-btn">⟵ HOME</a>
+            <h1 id="title">MEMORY<span class="highlight">X</span></h1>
+            <div style="width:80px;"></div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-box">
+                <span class="label">MOVES</span>
+                <span class="value" id="move-count">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">PAIRS</span>
+                <span class="value" id="pairs-found">0 / 8</span>
+            </div>
+            <div class="stat-box">
+                <span class="label">TIME</span>
+                <span class="value" id="timer">00:00</span>
+            </div>
+        </div>
+
+        <!-- Card Grid -->
+        <main class="board-container">
+            <div class="card-grid" id="card-grid"></div>
+        </main>
+
+        <!-- Overlays -->
+        <div id="overlay-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active modern-panel">
+                <h2 class="panel-title">MEMORY SCAN</h2>
+                <p class="subtitle">Flip cards and find all 8 matching pairs.<br>Fewer moves = bigger brain. Maybe.</p>
+                <div class="input-group">
+                    <input type="text" id="player-name" placeholder="ENTER CODENAME" autocomplete="off" maxlength="12">
+                </div>
+                <div class="difficulty-row">
+                    <button class="diff-btn active" data-cols="4">EASY (4×4)</button>
+                    <button class="diff-btn" data-cols="6">HARD (6×6)</button>
+                </div>
+                <button id="start-btn" class="action-btn glow-btn">SCAN MEMORY</button>
+            </div>
+
+            <!-- Win Screen -->
+            <div id="win-screen" class="screen modern-panel">
+                <h2 class="win-title">SCAN COMPLETE</h2>
+                <div class="win-stats">
+                    <div class="win-stat">
+                        <span class="win-label">TIME</span>
+                        <span class="win-value" id="final-time">--</span>
+                    </div>
+                    <div class="win-stat">
+                        <span class="win-label">MOVES</span>
+                        <span class="win-value" id="final-moves">--</span>
+                    </div>
+                    <div class="win-stat">
+                        <span class="win-label">RATING</span>
+                        <span class="win-value" id="final-rating">--</span>
+                    </div>
+                </div>
+                <p id="win-joke" class="win-joke"></p>
+                <button id="restart-btn" class="action-btn glow-btn">RESCAN</button>
+            </div>
+        </div>
+
+        <div class="bg-fx"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

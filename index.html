@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfinityGames | Arcade Hub</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="navbar">
+      <div class="logo">Infinity<span class="highlight">Games</span></div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">GAMES</a></li>
+        <li><a href="#catalogue">ARCADE</a></li>
+        <li><a href="under-construction.html">ABOUT</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">INFINITY ARCADE / 08 TITLES</p>
+        <h1 class="hero-title">PLAY SOMETHING<br /><span class="highlight">UNEXPECTED.</span></h1>
+        <p class="hero-subtitle">Fast rounds, high scores, and local rivalries. Pick a game and make the next ten minutes count.</p>
+        <a class="hero-cta" href="#catalogue">EXPLORE THE ARCADE <span>→</span></a>
+      </div>
+      <div class="hero-scene" aria-label="Featured game: Neon Blaster">
+        <div class="scene-scan"></div>
+        <span class="scene-label">FEATURED RUN / 01</span>
+        <div class="scene-ship">◆</div>
+        <div class="scene-enemy enemy-one">✦</div>
+        <div class="scene-enemy enemy-two">✦</div>
+        <div class="scene-score">HIGH SCORE <strong>18,420</strong></div>
+        <a href="games/battle-tap/index.html" class="scene-play">PLAY NEON BLASTER <span>↗</span></a>
+      </div>
+    </header>
+
+    <section class="arcade-pulse" aria-label="Arcade highlights">
+      <span><strong>07</strong> playable worlds</span><span><strong>02</strong> player battles</span><span><strong>∞</strong> rematches</span>
+    </section>
+
+    <!-- Choose -->
+    <section class="arcade-tools" aria-label="Game filters">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">/</span>
+        <input id="game-search" type="search" placeholder="Search games, moods, controls..." autocomplete="off" />
+        <kbd>CTRL K</kbd>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter games by mode">
+        <button class="filter-btn active" data-filter="all" type="button">ALL GAMES</button>
+        <button class="filter-btn" data-filter="solo" type="button">SOLO</button>
+        <button class="filter-btn" data-filter="versus" type="button">2 PLAYER</button>
+        <button class="filter-btn" data-filter="quick" type="button">QUICK PLAY</button>
+        <button id="favorites-filter" class="filter-btn" type="button">★ SAVED <span id="favorite-count">0</span></button>
+      </div>
+    </section>
+
+    <!-- Games Grid -->
+    <main id="catalogue" class="catalogue">
+      <div class="catalogue-heading">
+        <div><p class="eyebrow">BROWSE THE DROP</p><h2>Choose your arena</h2></div>
+        <p id="result-count" class="result-count">8 games available</p>
+      </div>
+      <div class="games-container">
+      <div class="game-card" data-title="snake x" data-modes="versus quick" data-tags="arcade two player keyboard classic">
+        <div class="card-image snake-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>SNAKE<span class="highlight">X</span></h2>
+            <button class="save-btn" aria-label="Save SnakeX" type="button">☆</button>
+          </div>
+          <span class="game-tag versus-tag">2 PLAYER</span>
+          <p class="card-desc">
+            Two snakes, one arena. Control your neon trail with WASD and the arrow keys.
+          </p>
+          <a href="games/snake/index.html" class="play-btn">Play</a>
+        </div>
+      </div>
+      <!-- Memory Card (LIVE) -->
+      <div class="game-card" data-title="memory x" data-modes="solo quick" data-tags="cards puzzle emoji focus">
+        <div class="card-image memory-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>MEMORY<span class="highlight">X</span></h2>
+            <button class="save-btn" aria-label="Save MemoryX" type="button">☆</button>
+          </div>
+          <span class="game-tag solo-tag">SOLO</span>
+          <p class="card-desc">
+            Flip cards, find the pairs, and chase a genius rating before the clock wins.
+          </p>
+          <a href="games/memory/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+      <!-- Tic Tac Toe Card -->
+      <div class="game-card" data-title="tic tac toe x" data-modes="versus quick" data-tags="classic strategy two player">
+        <div class="card-image tic-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>TIC-TAC-TOE<span class="highlight">X</span></h2>
+            <button class="save-btn" aria-label="Save Tic-Tac-Toe X" type="button">☆</button>
+          </div>
+          <span class="game-tag versus-tag">2 PLAYER</span>
+          <p class="card-desc">
+            The classic three-in-a-row duel with names, scorekeeping, and a little attitude.
+          </p>
+          <a href="games/tic-tac-toe/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+
+      <!-- Pong Card -->
+      <div class="game-card" data-title="pong x" data-modes="solo quick" data-tags="arcade reflex ai retro">
+        <div class="card-image pong-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>PONG<span class="highlight">X</span></h2>
+            <button class="save-btn" aria-label="Save Pong X" type="button">☆</button>
+          </div>
+          <span class="game-tag solo-tag">VS AI</span>
+          <p class="card-desc">
+            The legendary neon rally. Read the angle, move fast, and beat the AI to five.
+          </p>
+          <a href="games/pong/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+
+      <!-- Flappy Card -->
+      <div class="game-card" data-title="flappy x" data-modes="solo quick" data-tags="reflex endless hard score">
+        <div class="card-image flappy-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>FLAPPY<span class="highlight">X</span></h2>
+            <button class="save-btn" aria-label="Save Flappy X" type="button">☆</button>
+          </div>
+          <span class="game-tag solo-tag">SOLO</span>
+          <p class="card-desc">
+            Navigate a cybernetic square through endless neon pipes. One tap, infinite retries.
+          </p>
+          <a href="games/flappy/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+
+      <div class="game-card" data-title="connect four x" data-modes="versus quick" data-tags="strategy two player board">
+        <div class="card-image connect-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>CONNECT<span class="highlight">4</span></h2>
+            <button class="save-btn" aria-label="Save Connect Four X" type="button">☆</button>
+          </div>
+          <span class="game-tag versus-tag">2 PLAYER</span>
+          <p class="card-desc">
+            Drop discs, build a line, and block your rival. A quick local strategy showdown.
+          </p>
+          <a href="games/connect-four/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+      <div class="game-card featured-card" data-title="neon blaster x" data-modes="solo quick" data-tags="shooter action space arcade score">
+        <div class="card-image battle-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>NEON<span class="highlight">BLASTER</span></h2>
+            <button class="save-btn" aria-label="Save Neon Blaster" type="button">☆</button>
+          </div>
+          <span class="game-tag solo-tag">ARCADE SHOOTER</span>
+          <p class="card-desc">
+            Dodge the swarm, blast the boss, and chase a new high score every run.
+          </p>
+          <a href="games/battle-tap/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+      <div class="game-card" data-title="balloon blitz x" data-modes="solo quick" data-tags="catch reflex action bombs combo falling">
+        <div class="card-image balloon-bg"></div>
+        <div class="card-content">
+          <div class="card-header">
+            <h2>BALLOON<span class="highlight">BLITZ</span></h2>
+            <button class="save-btn" aria-label="Save Balloon Blitz" type="button">☆</button>
+          </div>
+          <span class="game-tag solo-tag">NEW / CATCHER</span>
+          <p class="card-desc">
+            Catch the good stuff, dodge the bombs, and keep your combo alive as the sky gets faster.
+          </p>
+          <a href="games/balloon-blitz/index.html" class="play-btn">PLAY</a>
+        </div>
+      </div>
+      </div>
+    </main>
+
+    <!-- Background Grid -->
+    <div class="bg-grid"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

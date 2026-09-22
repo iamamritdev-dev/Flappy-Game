@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe X - 2 Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        
+        <!-- Top UI Bar -->
+        <div class="top-bar">
+            <a href="../../index.html" class="back-hub-btn">⟵ HUB</a>
+        </div>
+
+        <!-- Header & Scores -->
+        <header class="game-header">
+            <h1 id="title">TIC-TAC-TOE<span class="highlight">X</span></h1>
+            <div class="score-board">
+                <div class="score-box p1-score-box">
+                    <span class="label" id="p1-label">P1 (X)</span>
+                    <span id="p1-score" class="value">0</span>
+                </div>
+                <div class="score-box" id="turn-indicator">
+                    <span class="label">TURN</span>
+                    <span id="turn-text" class="value">P1</span>
+                </div>
+                <div class="score-box p2-score-box">
+                    <span class="label" id="p2-label">P2 (O)</span>
+                    <span id="p2-score" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Tic Tac Toe Board -->
+        <main class="board-container">
+            <div class="grid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+        </main>
+
+        <!-- Overlays (Start & Game Over) -->
+        <div id="overlay-layer">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active modern-panel">
+                <h2 class="panel-title">VS MODE (2 PLAYER)</h2>
+                <div class="inputs-container">
+                    <div class="input-group p1-input">
+                        <input type="text" id="p1-name" placeholder="P1 NAME (X)" autocomplete="off" maxlength="10">
+                    </div>
+                    <div class="input-group p2-input">
+                        <input type="text" id="p2-name" placeholder="P2 NAME (O)" autocomplete="off" maxlength="10">
+                    </div>
+                </div>
+                <button id="start-btn" class="action-btn glow-btn">START MATCH</button>
+                <a href="../../index.html" class="back-link">RETURN BACK</a>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen modern-panel">
+                <h2 class="game-over-title" id="result-title">MATCH OVER</h2>
+                <div class="joke-container">
+                    <p id="name-joke" class="name-joke"></p>
+                </div>
+                <button id="restart-btn" class="action-btn glow-btn">PLAY AGAIN</button>
+                <a href="../../index.html" class="back-link"> RETURN BACK</a>
+            </div>
+        </div>
+
+        <div class="bg-fx"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

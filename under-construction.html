@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArcadeX | Under Construction</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .construction-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hazard-tape {
+            width: 100%;
+            height: 30px;
+            background: repeating-linear-gradient(45deg, #ffcc00, #ffcc00 20px, #222 20px, #222 40px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .hazard-tape.bottom {
+            top: auto;
+            bottom: 0;
+        }
+
+        .error-code {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-alt);
+            text-shadow: 0 0 20px rgba(255, 0, 60, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .joke-box {
+            background: rgba(10, 10, 15, 0.95);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 700px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+
+
+        .english-translation {
+            font-size: 0.9rem;
+            color: #777;
+            font-weight: 700;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: var(--primary);
+            color: #000;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+            letter-spacing: 2px;
+        }
+
+        .back-btn:hover {
+            background: var(--accent);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hazard-tape"></div>
+    <div class="bg-grid"></div>
+
+    <div class="construction-container">
+        <h1 class="error-code">404 : Sorry, <br> PAGE NOT READY</h1>
+        <h2 style="letter-spacing: 3px; color: #aaa;">SYSTEM DEVELOPMENT IN PROGRESS</h2>
+
+        <div class="joke-box">
+            <p class="english-translation">(Like the government's development, the work on this page is also happening
+                very slowly...)</p>
+            <hr style="border: 0; border-top: 1px solid #333; margin: 25px 0;">
+        </div>
+
+        <a href="index.html" class="back-btn">RETURN BACK</a>
+        <a onclick="alert('404 ERROR PAGE NOT FOUND')" style="color: red;" href="under-construction.html"
+            class="back-btn">Complain </a>
+    </div>
+
+    <div class="hazard-tape bottom"></div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balloon Blitz X</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <div class="topbar"><a href="../../index.html">← HUB</a><span>BALLOON BLITZ / SKY RUN</span></div>
+    <header>
+      <div><p class="eyebrow">NEW ARCADE CATCHER</p><h1>BALLOON<span>BLITZ</span></h1><p class="intro">Catch. Combo. Do not touch the bombs.</p></div>
+      <div class="hud"><div><small>SCORE</small><strong id="score">000000</strong></div><div><small>COMBO</small><strong id="combo">x1</strong></div><div><small>LIVES</small><strong id="lives">♥ ♥ ♥</strong></div></div>
+    </header>
+    <section class="game-frame"><canvas id="game-canvas" aria-label="Balloon Blitz game"></canvas><div id="overlay" class="overlay"><p class="eyebrow">THE SKY IS FALLING</p><h2 id="overlay-title">READY TO CATCH?</h2><p id="overlay-copy">Move with A / D or the arrow keys. Catch balloons for points, grab gold for a bonus, and avoid every bomb.</p><button id="start" type="button">START RUN</button></div></section>
+    <div class="control-strip"><span><b>A / D</b> MOVE</span><span><b>ARROWS</b> MOVE</span><span><b>GOLD</b> BONUS</span><span><b>💣</b> DANGER</span></div>
+    <div class="mobile-controls"><button data-key="ArrowLeft" type="button" aria-label="Move left">←</button><button data-key="ArrowRight" type="button" aria-label="Move right">→</button></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

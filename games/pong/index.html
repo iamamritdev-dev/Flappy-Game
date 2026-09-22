@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong X - vs AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="top-bar">
+            <a href="../../index.html" class="back-hub-btn">⟵ HUB</a>
+        </div>
+        <header class="game-header">
+            <h1 id="title">PONG<span class="highlight">X</span></h1>
+            <div class="score-board">
+                <div class="score-box p1-score-box">
+                    <span class="label" id="p1-label">YOU (W/S)</span>
+                    <span id="p1-score" class="value">0</span>
+                </div>
+                <div class="score-box p2-score-box">
+                    <span class="label" id="p2-label">AI</span>
+                    <span id="p2-score" class="value">0</span>
+                </div>
+            </div>
+        </header>
+        <main class="canvas-container">
+            <canvas id="game-canvas"></canvas>
+        </main>
+        <div id="overlay-layer">
+            <div id="start-screen" class="screen active modern-panel">
+                <h2 class="panel-title">VS AI MATCH</h2>
+                <p class="controls-hint">Move paddle: <b>W / S</b> &nbsp;or&nbsp; <b>↑ / ↓</b> &nbsp;|&nbsp; First to <b>5</b> wins!</p>
+                <div class="input-group p1-input" style="margin-top:10px;">
+                    <input type="text" id="p1-name" placeholder="ENTER YOUR NAME" autocomplete="off" maxlength="12">
+                </div>
+                <button id="start-btn" class="action-btn glow-btn">CHALLENGE AI</button>
+            </div>
+            <div id="game-over-screen" class="screen modern-panel">
+                <h2 class="game-over-title" id="result-title">MATCH OVER</h2>
+                <div class="joke-container">
+                    <p id="name-joke" class="name-joke"></p>
+                </div>
+                <button id="restart-btn" class="action-btn glow-btn">REMATCH</button>
+            </div>
+        </div>
+        <div class="bg-fx"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
